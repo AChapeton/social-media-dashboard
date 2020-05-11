@@ -31,7 +31,6 @@ body{
 /* header */
 
 .header{
-    display: none;
     background: #f8f9fe;
     padding-top: 2em;
     padding-bottom: 100px;
@@ -55,7 +54,7 @@ h1{
 .main-cards{
     /* border: 1px solid green; */
     margin-top: -50px;
-    display: none;  
+    margin-bottom: 3em; 
 }
 
 
@@ -145,7 +144,11 @@ h1{
 /* overview  */
 
 .overview{
-    margin-bottom: 1000px;
+   padding-bottom: 2em;
+}
+
+h2{
+    color: var(--gray);
 }
 
 .card-small{
@@ -186,10 +189,14 @@ h1{
     text-align: right;
     display: flex;
     align-items: flex-end;
-    color: var(--bright-red);
+    color: var(--lime-green);
     justify-content: flex-end;
     font-size: .8em;
     font-weight: bold;
+}
+
+.card-small-up .is-negative{
+    color: var(--bright-red);
 }
 
 .card-small-up span{
@@ -199,4 +206,10 @@ h1{
 
 .card-small-up img{
     margin-right: 5px;
+}
+
+@media screen and (min-width: 480px){
+    body{
+        border: 1px solid red;
+    }
 }
