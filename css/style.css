@@ -3,7 +3,8 @@
 body{
     margin: 0;
     font-family: 'Inter', sans-serif;
-    color: #1d2029;
+    color: var(--baseColor);
+    background: var(--baseBack);
 }
 
 :root{
@@ -19,6 +20,11 @@ body{
 --gray: #5f616d;
 --cardGray: #f0f8fa;
 --lightGray: #f8f9fe:
+--cardTitle: #6f717e;
+--baseBack:  #fff;
+--baseColor: #1d2029;
+--switchSpinner: #fff;
+--switch: #5f616d;
 }
 
 .wrapper{
@@ -49,7 +55,7 @@ body{
     height: 40px;
     display: block;
     border-radius: 20px;
-    background: var(--gray);
+    background: var(--switch);
     width: 80px;
     padding: 5px;
     box-sizing: border-box;
@@ -62,7 +68,7 @@ body{
     display: block;
     width: 30px;
     height: 30px;
-    background: white;
+    background: var(--switchSpinner);
     border-radius: 50%;
     transform: translateX(40px);
     transition: .3s;
@@ -140,7 +146,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #6f717e;
+    color: var(--cardTitle);
     font-size: .9em;
     font-weight: bold;
 }
@@ -163,7 +169,7 @@ h1{
     /* border: 1px solid green; */
     display: block;
     text-transform: uppercase;
-    color: var(--gray);
+    color: var(--cardTitle);
     letter-spacing: 5px;
     font-size: .75em;
 }
@@ -208,7 +214,7 @@ h2{
 
 .card-small-views{
     /* border: 1px solid green; */
-    color: var(--gray);
+    color: var(--cardTitle);
     font-weight: bold;
     font-size: .9em;
 }
@@ -283,41 +289,22 @@ h2{
 }
 
 @media (prefers-color-scheme: dark){
-    body{
-        background: #1d2029;
-        color: white;
-    }
-
-    .header{
-        background: #1d2029;
-    }
-
     :root{
         --cardGray: #252b43;
+        --baseBackground: #1d2029;
+        --baseColor: #fff;
         --gray: #8088ad;
+        --lightGray: #1d2029;
+        --cardTitle: #8088ad;
+        --switchSpinner: #282943;
+        --switch: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
     }
 
-    .card-title{
-        color: var(--gray);
-    }
-
-    .card-followers-title{
-        color: white;
-    }
-
-    .card-small-views{
-        color: #8088ad;
+    body{
+        background: var(--baseBackground);
     }
 
     .overview h2{
         color: white;
-    }
-
-    .switch{
-        background-image: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
-    }
-
-    .switch:before{
-        background: #282943;
     }
 }
