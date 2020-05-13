@@ -4,7 +4,7 @@ body{
     margin: 0;
     font-family: 'Inter', sans-serif;
     color: var(--baseColor);
-    background: var(--baseBack);
+    background: var(--baseBackground);
 }
 
 :root{
@@ -21,7 +21,7 @@ body{
 --cardGray: #f0f8fa;
 --lightGray: #f8f9fe:
 --cardTitle: #6f717e;
---baseBack:  #fff;
+--baseBackground:  #fff;
 --baseColor: #1d2029;
 --switchSpinner: #fff;
 --switch: #5f616d;
@@ -288,6 +288,28 @@ h2{
     }
 }
 
+.is-dark-mode{
+    --cardGray: #252b43;
+    --baseBackground: #1d2029;
+    --baseColor: #fff;
+    --gray: #8088ad;
+    --lightGray: #1d2029;
+    --cardTitle: #8088ad;
+    --switchSpinner: #282943;
+    --switch: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
+}
+
+.is-light-mode{
+    --gray: #5f616d;
+    --cardGray: #f0f8fa;
+    --lightGray: #f8f9fe:
+    --cardTitle: #6f717e;
+    --baseBackground:  #fff;
+    --baseColor: #1d2029;
+    --switchSpinner: #fff;
+    --switch: #5f616d;
+}
+
 @media (prefers-color-scheme: dark){
     :root{
         --cardGray: #252b43;
@@ -298,13 +320,5 @@ h2{
         --cardTitle: #8088ad;
         --switchSpinner: #282943;
         --switch: linear-gradient(to right, #4796d2 0%, #37ce8f 100%);
-    }
-
-    body{
-        background: var(--baseBackground);
-    }
-
-    .overview h2{
-        color: white;
     }
 }
